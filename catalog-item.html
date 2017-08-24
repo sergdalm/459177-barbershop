@@ -19,7 +19,7 @@
         <li><a href="contacts.html">Контакты</a></li>
       </ul>
       <ul class="user-navigation"><!--Для списка навигации пользователя нужно задаваться класс-->
-        <li><a class="login-link" href="#">Вход</a></li>
+        <li> <a class="login-link" href="login.html"> Вход</a></li>
         <!--Ссылке на "Вход" нужно задавать класс-->
       </ul>
     </nav>
@@ -36,7 +36,7 @@
 
       <section class="product-photos">
         <h2 class="visually-hidden">Изображения товаров</h2><!--Для блока изоражений нужно задавать заголовок-->
-        <p> class="product-photo-full"><!--Фото является визуальным описанием товара, поэтому используется тег<p>-->
+        <p class="product-photo-full"><!--Фото является визуальным описанием товара, поэтому используется тег<p>-->
           <img src="img/product-big.png" width="460" height="498" alt="Фото всего набора">
         </p>
         <ul class="product-photo-preview">
@@ -56,7 +56,7 @@
         </p>
         <p class="product-price"><!--Цену товара и кнопку "Купить" лучше оформлять в отдельный абзац-->
           <b>2 900 ₽</b>
-          <a class="button" href="#">Купить</a>
+          <button class="button" type="button">Купить</a>
         </p>
         <!--Комплектация товара принадлежит секции об описании товара-->
         <h3>В набор входят:</h3>
@@ -77,11 +77,14 @@
       </p>
 
       <div class="footer-social">
-        <b>Давайте дружить!</b>
+        <b> Давайте дружить! </b>
         <ul>
-          <li><a class="social-button" href="#">Вконтакте</a></li>
-          <li><a class="social-button" href="#">Facebook</a></li>
-          <li><a class="social-button" href="#">Instagram</a></li>
+          <li> <a class="social-button" href="#"><span class="visually-hidden">Вконтакте</span></a>
+          </li>
+          <li><a class="social-button" href="#"><span class="visually-hidden">Фейсбук</span></a>
+          </li>
+          <li><a class="social-button" href="#"><span class="visually-hidden">Инстаграм</span></a>
+          </li>
         </ul>
       </div>
 
@@ -95,24 +98,25 @@
 
     <!--Всплывающие формы входа просто скопирую-->
     <section class="modal modal-login">
-        <h2>Личный кабинет</h2>
-        <p>Введите свой логин и пароль.</p>
-        <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
-          <p>
-            <input class="login-icon-user" type="text" name="login" placeholder="Логин">
-          </p>
-          <p>
-            <input class="login-icon-password" type="password" name="password" placeholder="Пароль">
-          </p>
-          <p class="login-password-info">
-            <input type="checkbox" name="remember" class="visually-hidden">
-            Запомните меня
-            <a class="restore" href="#">Я забыл пароль!</a>
-          </p>
-          <button class="button" type="submit">Войти</button>
-        </form>
-        <span class="modal-close">x</span>
-      </section>
-    </main>
-    </body>
-  </html>
+      <h2>Личный кабинет</h2>
+      <p>Введите свой логин и пароль.</p>
+      <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
+        <p>
+          <lebel class="visually-hidden" for="user-login">Логин</lebel>
+          <input class="login-icon-user" type="text" name="login" placeholder="Логин" id="user-login">
+        </p>
+        <p>
+          <lebel class="visually-hidden" for="user-password">Пароль</lebel>
+          <input class="login-icon-password" type="password" name="password" placeholder="Пароль" id="user-password">
+        </p>
+        <p class="login-password-info">
+          <input type="checkbox" name="remember" class="visuality-hidden" id="user-remember">
+          <lebel class="visually-hidden" for="user-remember">Запомните меня</lebel>
+          <a class="restore" href="#">Я забыл пароль!</a>
+        </p>
+        <button class="button" type="submit">Войти</button>
+      </form>
+      <button class="model-close" type="button">Закрыть</button>
+    </section>
+  </body>
+</html>
