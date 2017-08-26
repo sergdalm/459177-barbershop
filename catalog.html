@@ -3,13 +3,14 @@
   <head>
     <meta charset="utf-8">
     <title> Каталог товаров </title>
+    <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
   </head>
 
   <body>
     <header class="main-header">
-        <nav class="main-navigayion">
-          <a class="main-header-logo" href="index.html"> <img scr="img/logo.svg" width="111" height="24" alt="Логотип барбершопа «Бородинский»"> </a>
+        <nav class="main-navigation">
+          <a class="main-header-logo" href="index.html"> <img src="img/logo.svg" width="111" height="24" alt="Логотип барбершопа «Бородинский»"> </a>
           <ul class="site-navigation"> <!--Класс задается тегу <ul>-->
             <li><a href="info.html"> Информация</a></li>
             <li><a href="news.html"> Новости </a></li>
@@ -36,8 +37,8 @@
         <h2 class="visually-hidden">Фильтр товаров</h2>
          <form class="filter" method="get" action="https://echo.htmlacademy.ru">
            <fieldset>
-             <legend>Производители:</legend>
-             <ul>
+             <legend class="filter-title">Производители:</legend>
+             <ul class=" list filter-list">
                <li class="filter-option">
                  <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="baxter-of-california" id="filter-baxter-of-california" checked>
                  <label for="filter-baxter-of-california"> Baxter of California </label>
@@ -65,19 +66,19 @@
              </ul>
            </fieldset>
            <fieldset>
-             <legend>Группы товаров:</legend>
-             <ul>
+             <legend class="filter-title">Группы товаров:</legend>
+             <ul class="list filter-list">
                <li class="filter-option">
                  <input class="visually-hidden filter-input filter-input-radio" type="radio" name="product-group" value="shaving" id="filter-shave">
-                 <legend for="filter-shave"> Бритвенные принадлежности</legend>
+                 <legend><label for="filter-shave"> Бритвенные принадлежности </label> </legend>
                </li>
                <li class="filter-option">
                  <input class="visually-hidden filter-input filter-input-radio" type="radio" name="product-group" value="hair-care" id="filter-care" checked>
-                 <legend for="filter-care">Средства для ухода</legend>
+                 <legend><label for="filter-care"> Средства для ухода</label></legend>
                 </li>
                <li class="filter-option">
                  <input class="visually-hidden filter-input filter-input-radio" type="radio" name="product-group" value="accessories" id="filter-accessories">
-                 <legend for="filter-accessories">Аксессуары</legend>
+                 <legend><label for="filter-accessories"> Аксессуары</label></legend>
                 </li>
              </ul>
            </fieldset>
@@ -87,7 +88,7 @@
 
        <section>
          <h2 class="visually-hidden">Список средств для ухода</h2>
-         <ul class="catalog-list">
+         <ul class="list catalog-list">
            <li class="catalog-item">
              <h3>
                <a href="catalog-item.html">
@@ -186,11 +187,16 @@
              </p>
            </li>
          </ul>
-         <ul class="pagination-list">
-           <li class="pagination-item"><button type="button" >1</button></li>
-           <li class="pagination-item"><button type="button">2</button></li>
-           <li class="pagination-item pagination-item-current"><button type="button">3</button></li>
-           <li class="pagination-item"><<button type="button">4</button></li>
+         <ul class="list pagination-list">
+           <li class="pagination-item">
+             <a class="button" >1</a>
+           </li>
+           <li class="pagination-item">
+             <a class="button">2</a></li>
+           <li class="pagination-item pagination-item-current">
+             <a class="button">3</a></li>
+           <li class="pagination-item">
+             <a class="button">4</a></li>
          </ul>
        </section>
      </main>
@@ -206,19 +212,19 @@
 
       <div class="footer-social">
         <b> Давайте дружить! </b>
-        <ul>
-          <li> <a class="social-button" href="#"><span class="visually-hidden">Вконтакте</span></a>
+        <ul class="list">
+          <li> <a class="social-button button-footer" href="#"><span class="visually-hidden">Вконтакте</span></a>
           </li>
-          <li><a class="social-button" href="#"><span class="visually-hidden">Фейсбук</span></a>
+          <li><a class="social-button button-footer" href="#"><span class="visually-hidden">Фейсбук</span></a>
           </li>
-          <li><a class="social-button" href="#"><span class="visually-hidden">Инстаграм</span></a>
+          <li><a class="social-button button-footer" href="#"><span class="visually-hidden">Инстаграм</span></a>
           </li>
         </ul>
       </div>
 
       <p class="footer-copyright">
         <b>Разработано:</b>
-        <a class="button" href ="https://htmlacademy.ru"> HTML Academy </a>
+        <a class="button button-footer" href ="https://htmlacademy.ru"> HTML Academy </a>
       </p>
     </footer>
 
@@ -227,21 +233,21 @@
       <p>Введите свой логин и пароль.</p>
       <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
         <p>
-          <lebel class="visually-hidden" for="user-login">Логин</lebel>
+          <label class="visually-hidden" for="user-login">Логин</label>
           <input class="login-icon-user" type="text" name="login" placeholder="Логин" id="user-login">
         </p>
         <p>
-          <lebel class="visually-hidden" for="user-password">Пароль</lebel>
+          <label class="visually-hidden" for="user-password">Пароль</label>
           <input class="login-icon-password" type="password" name="password" placeholder="Пароль" id="user-password">
         </p>
         <p class="login-password-info">
           <input type="checkbox" name="remember" class="visuality-hidden" id="user-remember">
-          <lebel class="visually-hidden" for="user-remember">Запомните меня</lebel>
+          <label class="login-checkbox" for="user-remember">Запомните меня</label><br>
           <a class="restore" href="#">Я забыл пароль!</a>
         </p>
         <button class="button" type="submit">Войти</button>
       </form>
-      <button class="model-close" type="button">Закрыть</button>
+      <button class="model-close button" type="button">Закрыть</button>
     </section>
   </body>
 </html>
