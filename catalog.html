@@ -3,12 +3,13 @@
   <head>
     <meta charset="utf-8">
     <title> Каталог товаров </title>
+    <link <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
   </head>
 
   <body>
-    <header class="main-header">
+    <header class="main-header inner-page">
         <nav class="main-navigation">
           <a class="main-header-logo" href="index.html"> <img src="img/logo.svg" width="111" height="24" alt="Логотип барбершопа «Бородинский»"> </a>
           <ul class="site-navigation"> <!--Класс задается тегу <ul>-->
@@ -70,15 +71,15 @@
              <ul class="list filter-list">
                <li class="filter-option">
                  <input class="visually-hidden filter-input filter-input-radio" type="radio" name="product-group" value="shaving" id="filter-shave">
-                 <legend><label for="filter-shave"> Бритвенные принадлежности </label> </legend>
+                 <label for="filter-shave"> Бритвенные принадлежности </label>
                </li>
                <li class="filter-option">
                  <input class="visually-hidden filter-input filter-input-radio" type="radio" name="product-group" value="hair-care" id="filter-care" checked>
-                 <legend><label for="filter-care"> Средства для ухода</label></legend>
+                <label for="filter-care"> Средства для ухода</label>
                 </li>
                <li class="filter-option">
                  <input class="visually-hidden filter-input filter-input-radio" type="radio" name="product-group" value="accessories" id="filter-accessories">
-                 <legend><label for="filter-accessories"> Аксессуары</label></legend>
+                 <label for="filter-accessories"> Аксессуары</label>
                 </li>
              </ul>
            </fieldset>
@@ -95,7 +96,7 @@
                  <span class="catalog-category">Набор для путешествий</span>
                  <span class="catalog-item-title">«Baxter of California»</span>
               </a>
-              <a href="catalog-item.html"> <!--Две ссылки с одинаковым адресом избыточны, лучше обернуть название и картинку в одну ссылку. А что это меняет? Текст и картинка ведь остаются ссылками, ведущими на одну и ту же страницу-->
+              <a href="catalog-item.html">
              </h3>
              <p class="catalog-item-image">
                  <img src="img/product-1.png" width="220" height="165" alt="Набор для путешествий «Baxter of California»">
@@ -103,7 +104,7 @@
              </a>
              <p class="catalog-item-price">
                <b>2 900 ₽</b>
-               <button type="button" class="button" href="#">Купить</button>
+               <a class="button"   href="#">Купить</a>
              </p>
            </li>
 
@@ -119,7 +120,7 @@
               </a>
              <p class="catalog-item-price">
                <b>750 ₽</b>
-               <button type="button" class="button" href="#">Купить</button>
+               <a class="button" href="#">Купить</a>
              </p>
            </li>
 
@@ -135,7 +136,7 @@
              </a>
              <p class="catalog-item-price">
                <b>290 ₽</b>
-               <button type="button" class="button" href="#">Купить</button>
+               <a class="button" href="#">Купить</a>
              </p>
            </li>
 
@@ -151,7 +152,7 @@
              </a>
              <p class="catalog-item-price">
                <b>500 ₽</b>
-               <button type="button" class="button" href="#">Купить</button>
+               <a class="button" href="#">Купить</a>
              </p>
            </li>
 
@@ -167,7 +168,7 @@
              </a>
              <p class="catalog-item-price">
                <b>300 ₽</b>
-               <button type="button" class="button" href="#">Купить</button>
+               <a class="button" href="#">Купить</a>
              </p>
            </li>
 
@@ -183,20 +184,20 @@
              </a>
              <p class="catalog-item-price">
                <b>3 900 ₽</b>
-               <button type="button" class="button" href="#">Купить</button>
+               <a class="button" href="#">Купить</a>
              </p>
            </li>
          </ul>
          <ul class="list pagination-list">
            <li class="pagination-item">
-             <a class="button" >1</a>
+             <a href="#">1</a>
            </li>
            <li class="pagination-item">
-             <a class="button">2</a></li>
+             <a href="#">2</a></li>
            <li class="pagination-item pagination-item-current">
-             <a class="button">3</a></li>
+             <a>3</a></li>
            <li class="pagination-item">
-             <a class="button">4</a></li>
+             <a href="#">4</a></li>
          </ul>
        </section>
      </main>

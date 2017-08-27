@@ -3,10 +3,12 @@
   <head>
     <meta charset="utf-8">
     <title> Товар "Каталог для путешествий «Baxter of California»"</title>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&amp;subset=latin,cyrillic" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
   </head>
 
-  <body>
+  <body class="inner-page">
   <header class="main-header">
     <nav class="main-navigation">
           <a class="main-header-logo" href="index.html">
@@ -36,11 +38,11 @@
       </ul>
 
       <section class="product-photos">
-        <h2 class="visually-hidden">Изображения товаров</h2><!--Для блока изоражений нужно задавать заголовок-->
+        <h2 class="visually-hidden">Изображения товара</h2><!--Для блока изоражений нужно задавать заголовок-->
         <p class="product-photo-full"><!--Фото является визуальным описанием товара, поэтому используется тег<p>-->
           <img src="img/product-big.png" width="460" height="498" alt="Фото всего набора">
         </p>
-        <ul class="product-photo-preview">
+        <ul class="product-photo-preview list">
           <!--Перечень элементов товара лучше обернуть в список-->
           <li><img src="img/product-small-1.png" width="140" height="149" alt="Фото в анфас"></li>
           <li><img src="img/product-small-2.png" width="140" height="149" alt="Фото в профиль"></li>
@@ -61,7 +63,7 @@
         </p>
         <!--Комплектация товара принадлежит секции об описании товара-->
         <h3>В набор входят:</h3>
-        <ul>
+        <ul class="list">
           <li>Срдество для умывания (50мл)</li>
           <li>Увлажняющий крем (50мл)</li>
           <li>Крем для бриться (50мл)</li>
@@ -70,54 +72,53 @@
         </ul>
       </section>
 
-    <footer class="main-footer"><!--Футеру нежно задавать класс-->
-      <p class="footer-contacts"> Барбершоп "Бородинский"<br>
-        Адрес: г. Санкт-Петербург, ул.Б. Конюшенная, д.19/8<br>
-        <a href="map.html">Как нас найти?</a><br>
-        Телефон:+7(495)666-02-66
-      </p>
-
-      <div class="footer-social">
-        <b> Давайте дружить! </b>
-        <ul>
-          <li> <a class="social-button" href="#"><span class="visually-hidden">Вконтакте</span></a>
-          </li>
-          <li><a class="social-button" href="#"><span class="visually-hidden">Фейсбук</span></a>
-          </li>
-          <li><a class="social-button" href="#"><span class="visually-hidden">Инстаграм</span></a>
-          </li>
-        </ul>
-      </div>
-
-      <p class="footer-cpyright">
-        <!--текст+кнопка могут оформляться в тег <p>-->
-        <!--Все имена классов в футере начинаются с "footer-"-->
-        <b>Разработано:</b>
-        <a class="button" href="htpps://htmlacademy.ru">HTML Academy</a>
-      </p>
-    </footer>
-
-    <!--Всплывающие формы входа просто скопирую-->
-    <section class="modal modal-login">
-      <h2>Личный кабинет</h2>
-      <p>Введите свой логин и пароль.</p>
-      <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
-        <p>
-          <lebel class="visually-hidden" for="user-login">Логин</lebel>
-          <input class="login-icon-user" type="text" name="login" placeholder="Логин" id="user-login">
+      <footer class="main-footer">
+        <p class="footer-contacts">
+          Барбершоп "Бородинский"<br>
+          Адрес: г. Санкт-Петербург, ул. Б.Канюшенная, д.19/8<br>
+          <a href="map.html">Как нас найти?</a><br>
+          Телефон:+7(495)666-02-66
         </p>
-        <p>
-          <lebel class="visually-hidden" for="user-password">Пароль</lebel>
-          <input class="login-icon-password" type="password" name="password" placeholder="Пароль" id="user-password">
+
+
+        <div class="footer-social">
+          <b> Давайте дружить! </b>
+          <ul class="list">
+            <li> <a class="social-button button-footer" href="#"><span class="visually-hidden">Вконтакте</span></a>
+            </li>
+            <li><a class="social-button button-footer" href="#"><span class="visually-hidden">Фейсбук</span></a>
+            </li>
+            <li><a class="social-button button-footer" href="#"><span class="visually-hidden">Инстаграм</span></a>
+            </li>
+          </ul>
+        </div>
+
+        <p class="footer-copyright">
+          <b>Разработано:</b>
+          <a class="button button-footer" href ="https://htmlacademy.ru"> HTML Academy </a>
         </p>
-        <p class="login-password-info">
-          <input type="checkbox" name="remember" class="visuality-hidden" id="user-remember">
-          <lebel class="visually-hidden" for="user-remember">Запомните меня</lebel>
-          <a class="restore" href="#">Я забыл пароль!</a>
-        </p>
-        <button class="button" type="submit">Войти</button>
-      </form>
-      <button class="model-close" type="button">Закрыть</button>
-    </section>
-  </body>
-</html>
+      </footer>
+
+      <section class="modal modal-login">
+        <h2>Личный кабинет</h2>
+        <p>Введите свой логин и пароль.</p>
+        <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
+          <p>
+            <label class="visually-hidden" for="user-login">Логин</label>
+            <input class="login-icon-user" type="text" name="login" placeholder="Логин" id="user-login">
+          </p>
+          <p>
+            <label class="visually-hidden" for="user-password">Пароль</label>
+            <input class="login-icon-password" type="password" name="password" placeholder="Пароль" id="user-password">
+          </p>
+          <p class="login-password-info">
+            <input type="checkbox" name="remember" class="visuality-hidden" id="user-remember">
+            <label class="login-checkbox" for="user-remember">Запомните меня</label><br>
+            <a class="restore" href="#">Я забыл пароль!</a>
+          </p>
+          <button class="button" type="submit">Войти</button>
+        </form>
+        <button class="model-close button" type="button">Закрыть</button>
+      </section>
+    </body>
+  </html>
